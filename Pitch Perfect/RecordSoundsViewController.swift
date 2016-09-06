@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  RecordSoundsViewController.swift
 //  Pitch Perfect
 //
 //  Created by Aayush Kapoor on 06/09/16.
@@ -9,7 +9,7 @@
 import AVFoundation
 import UIKit
 
-class ViewController: UIViewController, AVAudioRecorderDelegate {
+class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
 
     var audioRecorder:AVAudioRecorder!
 
