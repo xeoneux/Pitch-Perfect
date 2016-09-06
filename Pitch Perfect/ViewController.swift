@@ -6,9 +6,12 @@
 //  Copyright © 2016 Aayush Kapoor. All rights reserved.
 //
 
+import AVFoundation
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, AVAudioRecorderDelegate {
+
+    var audioRecorder:AVAudioRecorder!
 
     @IBOutlet weak var recordButton: UIButton!
     @IBOutlet weak var recordingLabel: UILabel!
@@ -34,6 +37,21 @@ class ViewController: UIViewController {
         recordButton.enabled = false
         stopRecordingButton.enabled = true
         recordingLabel.text = "Recording in progress"
+
+        let dirPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory,.UserDomainMask, true)[0] as String
+        let recordingName = "recordedVoice.wav"
+        let pathArray = [dirPath, recordingName]
+        let filePath = NSURL.fileURLWithPathComponents(pathArray)
+        print(filePath)
+
+        let session = AVAudioSession.sharedInstance()
+        try!
+            session.setCategory(AVAudioSessionCategoryPlayAndRecord)
+        try! audioRecorder = AVAudioRecorder(URL: filePath!, settings: [:])
+        audioRecorder.delegate = self
+        audioRecorder.meteringEnabled = true
+        audioRecorder.prepareToRecord()
+        audioRecorder.record()
     }
 
     @IBAction func stopRecording(sender: AnyObject) {
