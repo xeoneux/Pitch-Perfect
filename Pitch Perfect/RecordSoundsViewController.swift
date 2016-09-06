@@ -9,7 +9,7 @@
 import AVFoundation
 import UIKit
 
-class RecordSoundsViewController: UIViewController {
+class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
 
     var audioRecorder:AVAudioRecorder!
 
@@ -46,7 +46,7 @@ class RecordSoundsViewController: UIViewController {
         let session = AVAudioSession.sharedInstance()
         try! session.setCategory(AVAudioSessionCategoryPlayAndRecord)
         try! audioRecorder = AVAudioRecorder(URL: filePath!, settings: [:])
-
+        audioRecorder.delegate = self
         audioRecorder.meteringEnabled = true
         audioRecorder.prepareToRecord()
         audioRecorder.record()
