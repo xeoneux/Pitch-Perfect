@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8410ED961D7F444400BBFDA1 /* PlaySoundsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8410ED951D7F444400BBFDA1 /* PlaySoundsViewController.swift */; };
 		844170C41D7F1E0700D1814B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844170C31D7F1E0700D1814B /* AppDelegate.swift */; };
 		844170C61D7F1E0700D1814B /* RecordSoundsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844170C51D7F1E0700D1814B /* RecordSoundsViewController.swift */; };
 		844170C91D7F1E0700D1814B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 844170C71D7F1E0700D1814B /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8410ED951D7F444400BBFDA1 /* PlaySoundsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaySoundsViewController.swift; sourceTree = "<group>"; };
 		844170C01D7F1E0700D1814B /* Pitch Perfect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pitch Perfect.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		844170C31D7F1E0700D1814B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		844170C51D7F1E0700D1814B /* RecordSoundsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordSoundsViewController.swift; sourceTree = "<group>"; };
@@ -56,6 +58,7 @@
 			children = (
 				844170C31D7F1E0700D1814B /* AppDelegate.swift */,
 				844170C51D7F1E0700D1814B /* RecordSoundsViewController.swift */,
+				8410ED951D7F444400BBFDA1 /* PlaySoundsViewController.swift */,
 				844170C71D7F1E0700D1814B /* Main.storyboard */,
 				844170CA1D7F1E0700D1814B /* Assets.xcassets */,
 				844170CC1D7F1E0700D1814B /* LaunchScreen.storyboard */,
@@ -136,6 +139,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				844170C61D7F1E0700D1814B /* RecordSoundsViewController.swift in Sources */,
+				8410ED961D7F444400BBFDA1 /* PlaySoundsViewController.swift in Sources */,
 				844170C41D7F1E0700D1814B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
