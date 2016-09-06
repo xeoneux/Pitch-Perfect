@@ -30,11 +30,20 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lXG-y6-iUx">
+                                <rect key="frame" x="247" y="352" width="106" height="30"/>
+                                <state key="normal" title="Stop Recording"/>
+                                <connections>
+                                    <action selector="stopRecording:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PLq-Ow-RbX"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="adc-PX-z6S" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BIh-Dn-oQj"/>
+                            <constraint firstItem="lXG-y6-iUx" firstAttribute="centerX" secondItem="ylL-OX-spP" secondAttribute="centerX" id="IhK-3v-L2e"/>
                             <constraint firstItem="adc-PX-z6S" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="byL-tW-UcY"/>
+                            <constraint firstItem="lXG-y6-iUx" firstAttribute="top" secondItem="ylL-OX-spP" secondAttribute="bottom" constant="8" id="dAa-4Z-qQz"/>
                             <constraint firstItem="ylL-OX-spP" firstAttribute="centerX" secondItem="adc-PX-z6S" secondAttribute="centerX" id="dob-tO-BvU"/>
                             <constraint firstItem="ylL-OX-spP" firstAttribute="top" secondItem="adc-PX-z6S" secondAttribute="bottom" constant="8" id="e7o-fG-i6z"/>
                         </constraints>
