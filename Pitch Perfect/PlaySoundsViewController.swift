@@ -39,6 +39,7 @@ class PlaySoundsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupAudio()
+        setStackViewLayout()
     }
 
     override func viewWillAppear(animated: Bool) {
@@ -53,17 +54,22 @@ class PlaySoundsViewController: UIViewController {
         innerStackView4.axis = axisStyle
     }
 
-    override func viewWillTransitionToSize(size: CGSize, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator) {
-
+    func setStackViewLayout() {
         let orientation = UIApplication.sharedApplication().statusBarOrientation
 
-        if orientation.isLandscape {
+        if orientation.isPortrait {
             outerStackView.axis = .Vertical
             setInnerStackViewsAxis(.Horizontal)
         } else {
             outerStackView.axis = .Horizontal
             setInnerStackViewsAxis(.Vertical)
         }
+    }
+
+    override func viewWillTransitionToSize(size: CGSize, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator) {
+        coordinator.animateAlongsideTransition({ context in
+                self.setStackViewLayout()
+            }, completion: nil)
     }
 
     @IBAction func playSoundForButton(sender: UIButton) {
