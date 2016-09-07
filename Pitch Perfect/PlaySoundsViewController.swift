@@ -6,6 +6,7 @@
 //  Copyright © 2016 Aayush Kapoor. All rights reserved.
 //
 
+import AVFoundation
 import UIKit
 
 class PlaySoundsViewController: UIViewController {
@@ -19,6 +20,24 @@ class PlaySoundsViewController: UIViewController {
     @IBOutlet weak var stopButton: UIButton!
 
     var recordedAudioURL: NSURL!
+    var audioFile: AVAudioFile!
+    var audioEngine: AVAudioEngine!
+    var audioPlayerNode: AVAudioPlayerNode!
+    var stopTimer: NSTimer!
+
+    enum ButtonType: Int {
+        case Slow, Fast, Chipmunk, DarthVader, Echo, Reverb
+    }
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setupAudio()
+    }
+
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        configureUI(.NotPlaying)
+    }
 
     @IBAction func playSoundForButton(sender: UIButton) {
         print("Playback!")
