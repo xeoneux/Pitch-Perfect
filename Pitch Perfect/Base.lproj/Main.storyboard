@@ -137,35 +137,36 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="adc-PX-z6S">
-                                <rect key="frame" x="250" y="250" width="100" height="100"/>
-                                <state key="normal" image="recordButton"/>
-                                <connections>
-                                    <action selector="recordAudio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Djq-yp-nX9"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to Record" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ylL-OX-spP">
-                                <rect key="frame" x="246" y="358" width="107" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lXG-y6-iUx">
-                                <rect key="frame" x="275" y="387" width="50" height="50"/>
-                                <state key="normal" image="stopRecordingButton"/>
-                                <connections>
-                                    <action selector="stopRecording:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PLq-Ow-RbX"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="4If-u9-AMJ">
+                                <rect key="frame" x="247" y="205" width="107" height="191"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="adc-PX-z6S">
+                                        <rect key="frame" x="0.0" y="0.0" width="107" height="100"/>
+                                        <state key="normal" image="recordButton"/>
+                                        <connections>
+                                            <action selector="recordAudio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Djq-yp-nX9"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to Record" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ylL-OX-spP">
+                                        <rect key="frame" x="0.0" y="110" width="107" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lXG-y6-iUx">
+                                        <rect key="frame" x="0.0" y="141" width="107" height="50"/>
+                                        <state key="normal" image="stopRecordingButton"/>
+                                        <connections>
+                                            <action selector="stopRecording:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PLq-Ow-RbX"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="adc-PX-z6S" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BIh-Dn-oQj"/>
-                            <constraint firstItem="lXG-y6-iUx" firstAttribute="centerX" secondItem="ylL-OX-spP" secondAttribute="centerX" id="IhK-3v-L2e"/>
-                            <constraint firstItem="adc-PX-z6S" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="byL-tW-UcY"/>
-                            <constraint firstItem="lXG-y6-iUx" firstAttribute="top" secondItem="ylL-OX-spP" secondAttribute="bottom" constant="8" id="dAa-4Z-qQz"/>
-                            <constraint firstItem="ylL-OX-spP" firstAttribute="centerX" secondItem="adc-PX-z6S" secondAttribute="centerX" id="dob-tO-BvU"/>
-                            <constraint firstItem="ylL-OX-spP" firstAttribute="top" secondItem="adc-PX-z6S" secondAttribute="bottom" constant="8" id="e7o-fG-i6z"/>
+                            <constraint firstItem="4If-u9-AMJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RD9-s3-4Er"/>
+                            <constraint firstItem="4If-u9-AMJ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ffe-2u-Ejw"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="cdu-gM-uOJ"/>
