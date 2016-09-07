@@ -110,6 +110,11 @@
                         <outlet property="chipmunkButton" destination="N6J-Kp-jKH" id="Aze-GO-rAW"/>
                         <outlet property="darthVaderButton" destination="SlO-LO-yWa" id="5Hj-Iq-4pv"/>
                         <outlet property="echoButton" destination="slH-bf-SYS" id="IAU-yY-lxe"/>
+                        <outlet property="innerStackView1" destination="nKV-S0-XZB" id="S31-B7-zfy"/>
+                        <outlet property="innerStackView2" destination="fUd-no-AC5" id="LZd-rs-rhe"/>
+                        <outlet property="innerStackView3" destination="zpo-lO-slV" id="0yU-dS-eSr"/>
+                        <outlet property="innerStackView4" destination="uPm-7u-Zgt" id="Nmb-tC-eKz"/>
+                        <outlet property="outerStackView" destination="y7o-Ul-Fxr" id="2iQ-SO-oci"/>
                         <outlet property="rabbitButton" destination="K7i-HJ-PLi" id="cNt-Vs-TLJ"/>
                         <outlet property="reverbButton" destination="Pe7-hw-SOr" id="h0t-kv-Diz"/>
                         <outlet property="snailButton" destination="cff-sg-jEQ" id="oPY-40-gMF"/>

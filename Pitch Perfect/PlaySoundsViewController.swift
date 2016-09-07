@@ -19,6 +19,13 @@ class PlaySoundsViewController: UIViewController {
     @IBOutlet weak var reverbButton: UIButton!
     @IBOutlet weak var stopButton: UIButton!
 
+    @IBOutlet weak var outerStackView: UIStackView!
+
+    @IBOutlet weak var innerStackView1: UIStackView!
+    @IBOutlet weak var innerStackView2: UIStackView!
+    @IBOutlet weak var innerStackView3: UIStackView!
+    @IBOutlet weak var innerStackView4: UIStackView!
+
     var recordedAudioURL: NSURL!
     var audioFile: AVAudioFile!
     var audioEngine: AVAudioEngine!
@@ -37,6 +44,26 @@ class PlaySoundsViewController: UIViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         configureUI(.NotPlaying)
+    }
+
+    func setInnerStackViewsAxis(axisStyle: UILayoutConstraintAxis)  {
+        innerStackView1.axis = axisStyle
+        innerStackView2.axis = axisStyle
+        innerStackView3.axis = axisStyle
+        innerStackView4.axis = axisStyle
+    }
+
+    override func viewWillTransitionToSize(size: CGSize, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator) {
+
+        let orientation = UIApplication.sharedApplication().statusBarOrientation
+
+        if orientation.isLandscape {
+            outerStackView.axis = .Vertical
+            setInnerStackViewsAxis(.Horizontal)
+        } else {
+            outerStackView.axis = .Horizontal
+            setInnerStackViewsAxis(.Vertical)
+        }
     }
 
     @IBAction func playSoundForButton(sender: UIButton) {
